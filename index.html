@@ -8,181 +8,213 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#0b0f2f;color:white;}
+
+section{padding:50px 20px;text-align:center;}
+
+.hero{
+background:linear-gradient(135deg,#1a237e,#0d47a1);
+padding:80px 20px;
 }
 
-body {
-  background: #0b0f2f;
-  color: white;
-  overflow-x: hidden;
+.hero h1{
+font-size:50px;
+background:linear-gradient(90deg,#00e5ff,#ff00ff);
+-webkit-background-clip:text;
+color:transparent;
 }
 
-/* 🔥 HERO */
-.hero {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(135deg, #0b0f2f, #1a237e);
-  text-align: center;
+.btn{
+margin-top:20px;
+padding:12px 25px;
+border:none;
+border-radius:25px;
+background:#ffcc00;
+cursor:pointer;
 }
 
-.hero h1 {
-  font-size: 55px;
-  background: linear-gradient(90deg, #00e5ff, #ff00ff);
-  -webkit-background-clip: text;
-  color: transparent;
+.grid{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
 }
 
-.hero p {
-  margin: 10px 0;
-  font-size: 18px;
+.card{
+background:rgba(255,255,255,0.08);
+padding:20px;
+margin:15px;
+border-radius:12px;
+width:250px;
 }
 
-.btn {
-  margin-top: 20px;
-  padding: 12px 30px;
-  border: none;
-  border-radius: 30px;
-  background: linear-gradient(90deg, #ff00cc, #3333ff);
-  color: white;
-  cursor: pointer;
-  transition: 0.3s;
+.card:hover{transform:scale(1.05);transition:0.3s;}
+
+h2{margin-bottom:20px;}
+
+#timer{margin-top:10px;color:#00e5ff;}
+
+/* Modal */
+#profileModal{
+display:none;
+position:fixed;
+top:0;left:0;
+width:100%;height:100%;
+background:rgba(0,0,0,0.9);
+overflow:auto;
 }
 
-.btn:hover {
-  transform: scale(1.1);
-}
-
-/* 💎 GLASS CARD */
-.card {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 15px;
-  backdrop-filter: blur(10px);
-  padding: 20px;
-  margin: 20px;
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-10px);
-}
-
-/* 📦 SECTION */
-section {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-/* 🧩 GRID */
-.grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-/* ⏳ TIMER */
-#timer {
-  font-size: 25px;
-  margin-top: 20px;
-  color: #00e5ff;
-}
-
-/* 📱 MOBILE */
-@media(max-width:768px) {
-  .hero h1 {
-    font-size: 35px;
-  }
+.modal-content{
+background:#111;
+margin:50px auto;
+padding:20px;
+width:90%;
+max-width:700px;
+border-radius:10px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- 🔥 HERO -->
+<!-- HERO -->
 <section class="hero">
-  <h1>IDEATHON 2026</h1>
-  <p>From Idea to Impact</p>
-  <p>An Idea-Based Innovation Challenge</p>
+<h1>IDEATHON</h1>
+<h3>From Idea to Impact</h3>
+<p>An Idea-Based Innovation Challenge</p>
+<p><b>For 1st & 2nd Year Students</b></p>
 
-  <div id="timer"></div>
+<div id="timer"></div>
 
-  <button class="btn" onclick="window.location.href='https://yourformlink.com'">
-    Register Now
-  </button>
+<button class="btn" onclick="window.location.href='https://yourformlink.com'">
+Register Now
+</button>
 </section>
 
-<!-- 💡 WHY -->
+<!-- WHY -->
 <section>
-  <h2>Why Ideathon?</h2>
-  <div class="grid">
-    <div class="card">💡 Got an idea but no roadmap?</div>
-    <div class="card">🚀 No working model required</div>
-    <div class="card">⭐ Originality matters most</div>
-    <div class="card">👨‍🏫 Mentorship by IEEE experts</div>
-  </div>
+<h2>💡 Why Ideathon?</h2>
+<div class="grid">
+<div class="card">Got an idea but no clear roadmap?</div>
+<div class="card">No working model required</div>
+<div class="card">Originality matters most</div>
+<div class="card">Guidance & mentorship by IEEE experts</div>
+</div>
 </section>
 
-<!-- ⭐ HIGHLIGHTS -->
+<!-- HIGHLIGHTS -->
 <section>
-  <h2>Event Highlights</h2>
-  <div class="grid">
-    <div class="card">🏆 Top 30 Ideas</div>
-    <div class="card">🎤 Pitch Round</div>
-    <div class="card">🔥 Top 10 Mentorship</div>
-    <div class="card">🥇 Winners Trophy</div>
-  </div>
+<h2>⭐ Event Highlights</h2>
+<div class="grid">
+<div class="card">🏆 Top 30 Ideas shortlisted</div>
+<div class="card">🎤 Pitch Round (5 min + 2 min Q&A)</div>
+<div class="card">🔥 Top 10 Teams mentorship</div>
+<div class="card">🥇 Top 3 Winners (Trophy & Certificate)</div>
+<div class="card">🌍 National / State Level Exposure</div>
+</div>
 </section>
 
-<!-- 📅 DETAILS -->
+<!-- DETAILS -->
 <section>
-  <h2>Event Details</h2>
-  <div class="card">
-    📅 Date: Coming Soon <br>
-    ⏰ Time: Coming Soon <br>
-    📍 Venue: BBDNIIT
-  </div>
+<h2>📅 Event Details</h2>
+<div class="card">
+Date: Coming Soon <br>
+Time: Coming Soon <br>
+Venue: BBDNIIT
+</div>
 </section>
 
-<!-- ✅ ELIGIBILITY -->
+<!-- ELIGIBILITY -->
 <section>
-  <h2>Eligibility</h2>
-  <div class="grid">
-    <div class="card">1st & 2nd Year</div>
-    <div class="card">Any Branch</div>
-    <div class="card">Individual / Team</div>
-  </div>
+<h2>✅ Eligibility</h2>
+<div class="grid">
+<div class="card">Only 1st & 2nd Year Students</div>
+<div class="card">Any Branch</div>
+<div class="card">Individual or Team participation</div>
+</div>
 </section>
 
-<!-- 🚀 FOOTER -->
+<!-- TEAM -->
 <section>
-  <h3>Made with ❤️ by IEEE Team</h3>
+<h2>👥 Organised by IEEE Student Branch BBDNIIT</h2>
+
+<div class="grid">
+
+<div class="card" onclick="openProfile()">
+<h3>Sushant Yadav</h3>
+<p>Chairperson</p>
+</div>
+
+<div class="card">
+<h3>Uday Pratap Yadav</h3>
+<p>Vice Chairperson</p>
+</div>
+
+<div class="card">
+<h3>Zeeshan Khan</h3>
+<p>Secretary</p>
+</div>
+
+<div class="card">
+<h3>Shruti Chauhan</h3>
+<p>Treasurer</p>
+</div>
+
+<div class="card">
+<h3>Ujjwal</h3>
+<p>Webmaster</p>
+</div>
+
+</div>
 </section>
 
-<!-- ⏳ TIMER SCRIPT -->
+<!-- MODAL -->
+<div id="profileModal">
+<div class="modal-content">
+
+<h2>Sushant Yadav</h2>
+<p><b>B.Tech CSE Student - AKTU</b></p>
+
+<h3>🚀 Achievements</h3>
+<ul>
+<li>Best Poster Award - IISF 2024</li>
+<li>Top 3 Projects (AI/ML, IoT)</li>
+<li>National Level Representation</li>
+<li>Inspire Award Manak</li>
+<li>NITI Aayog Innovation Winner</li>
+</ul>
+
+<h3>💡 Projects</h3>
+<p>IoT Smart Stretcher - Real-time hospital system</p>
+
+<h3>🛠 Skills</h3>
+<p>C, C++, Python, HTML, IoT, GitHub</p>
+
+<h3>📜 Experience</h3>
+<p>Maker Faire, IISF, MakeX Internship</p>
+
+<br>
+<button onclick="closeProfile()" class="btn">Close</button>
+
+</div>
+</div>
+
+<!-- TIMER -->
 <script>
-var countDownDate = new Date("Apr 10, 2026 10:00:00").getTime();
+var countDownDate=new Date("Apr 10, 2026 10:00:00").getTime();
+setInterval(function(){
+var now=new Date().getTime();
+var d=countDownDate-now;
+var days=Math.floor(d/(1000*60*60*24));
+var h=Math.floor((d%(1000*60*60*24))/(1000*60*60));
+var m=Math.floor((d%(1000*60*60))/(1000*60));
+document.getElementById("timer").innerHTML="⏳ "+days+"d "+h+"h "+m+"m";
+},1000);
+</script>
 
-var x = setInterval(function() {
-  var now = new Date().getTime();
-  var distance = countDownDate - now;
-
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
-  var minutes = Math.floor((distance % (1000*60*60)) / (1000*60));
-
-  document.getElementById("timer").innerHTML =
-    "⏳ " + days + "d " + hours + "h " + minutes + "m ";
-
-  if (distance < 0) {
-    document.getElementById("timer").innerHTML = "Event Started 🚀";
-  }
-}, 1000);
+<script>
+function openProfile(){document.getElementById("profileModal").style.display="block";}
+function closeProfile(){document.getElementById("profileModal").style.display="none";}
 </script>
 
 </body>
