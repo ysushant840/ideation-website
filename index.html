@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IDEATHON 2026</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #0b0f2f;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* 🔥 HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0b0f2f, #1a237e);
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 55px;
+  background: linear-gradient(90deg, #00e5ff, #ff00ff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.hero p {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.btn {
+  margin-top: 20px;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #ff00cc, #3333ff);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+/* 💎 GLASS CARD */
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  margin: 20px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+/* 📦 SECTION */
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* 🧩 GRID */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ⏳ TIMER */
+#timer {
+  font-size: 25px;
+  margin-top: 20px;
+  color: #00e5ff;
+}
+
+/* 📱 MOBILE */
+@media(max-width:768px) {
+  .hero h1 {
+    font-size: 35px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- 🔥 HERO -->
+<section class="hero">
+  <h1>IDEATHON 2026</h1>
+  <p>From Idea to Impact</p>
+  <p>An Idea-Based Innovation Challenge</p>
+
+  <div id="timer"></div>
+
+  <button class="btn" onclick="window.location.href='https://yourformlink.com'">
+    Register Now
+  </button>
+</section>
+
+<!-- 💡 WHY -->
+<section>
+  <h2>Why Ideathon?</h2>
+  <div class="grid">
+    <div class="card">💡 Got an idea but no roadmap?</div>
+    <div class="card">🚀 No working model required</div>
+    <div class="card">⭐ Originality matters most</div>
+    <div class="card">👨‍🏫 Mentorship by IEEE experts</div>
+  </div>
+</section>
+
+<!-- ⭐ HIGHLIGHTS -->
+<section>
+  <h2>Event Highlights</h2>
+  <div class="grid">
+    <div class="card">🏆 Top 30 Ideas</div>
+    <div class="card">🎤 Pitch Round</div>
+    <div class="card">🔥 Top 10 Mentorship</div>
+    <div class="card">🥇 Winners Trophy</div>
+  </div>
+</section>
+
+<!-- 📅 DETAILS -->
+<section>
+  <h2>Event Details</h2>
+  <div class="card">
+    📅 Date: Coming Soon <br>
+    ⏰ Time: Coming Soon <br>
+    📍 Venue: BBDNIIT
+  </div>
+</section>
+
+<!-- ✅ ELIGIBILITY -->
+<section>
+  <h2>Eligibility</h2>
+  <div class="grid">
+    <div class="card">1st & 2nd Year</div>
+    <div class="card">Any Branch</div>
+    <div class="card">Individual / Team</div>
+  </div>
+</section>
+
+<!-- 🚀 FOOTER -->
+<section>
+  <h3>Made with ❤️ by IEEE Team</h3>
+</section>
+
+<!-- ⏳ TIMER SCRIPT -->
+<script>
+var countDownDate = new Date("Apr 10, 2026 10:00:00").getTime();
+
+var x = setInterval(function() {
+  var now = new Date().getTime();
+  var distance = countDownDate - now;
+
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
+  var minutes = Math.floor((distance % (1000*60*60)) / (1000*60));
+
+  document.getElementById("timer").innerHTML =
+    "⏳ " + days + "d " + hours + "h " + minutes + "m ";
+
+  if (distance < 0) {
+    document.getElementById("timer").innerHTML = "Event Started 🚀";
+  }
+}, 1000);
+</script>
+
+</body>
+</html>
